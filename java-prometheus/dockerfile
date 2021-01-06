@@ -5,15 +5,16 @@ FROM maven:3.6.0-jdk-11 AS build
 
 WORKDIR /workspace
 COPY pom.xml pom.xml
-RUN ls
-
-# RUN mvn package -Pstage
+COPY java-prometheus java-prometheus
+RUN mvn package
 
 #
 # Package stage
 #
-# FROM openjdk:11
-# COPY --from=build /workspace/web-app/target/cms-simulator.jar /app/cms-simulator.jar
+FROM openjdk:11
+WORKDIR /workspace
+COPY --from=build /workspace/java-prometheus/target/demo.jar demo.jar
+COPY --from=build /workspace/java-prometheus/target/lib lib 
 # EXPOSE 8080
 # ENTRYPOINT ["java","-jar","/app/cms-simulator.jar"]
 
