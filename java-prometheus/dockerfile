@@ -16,7 +16,5 @@ WORKDIR /workspace
 COPY --from=build /workspace/java-prometheus/target/demo.jar demo.jar
 COPY --from=build /workspace/java-prometheus/target/lib lib 
 # EXPOSE 8080
-# ENTRYPOINT ["java","-jar","/app/cms-simulator.jar"]
 
-# docker build -t cms-simulator:1.0.0 ..
-# docker run -d -p 8090:8090 --name cms-simulator cms-simulator:1.0.0
+ENTRYPOINT ["java","-jar","demo.jar"]
