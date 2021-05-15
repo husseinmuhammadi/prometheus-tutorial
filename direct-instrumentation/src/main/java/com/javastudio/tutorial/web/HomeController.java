@@ -30,12 +30,6 @@ public class HomeController {
         return "Hello world!";
     }
 
-    @Scheduled(fixedRate = 1000)
-    public void increaseRequestCount() {
-        promRequestsTotal.inc();
-        LOGGER.info("Request count: {}", promRequestsTotal.get());
-    }
-
     @RequestMapping(path = "/metrics")
     public void metrics(Writer responseWriter) throws IOException {
         TextFormat.write004(responseWriter, CollectorRegistry.defaultRegistry.metricFamilySamples());
