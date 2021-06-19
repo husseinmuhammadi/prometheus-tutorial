@@ -12,7 +12,7 @@
     <modules>
 <!--        <module>direct-instrumentation</module>-->
 <!--        <module>direct-instrumentation-with-spring-boot-endpoint</module>-->
-        <module>java-prometheus</module>
+        <module>java-console-with-prometheus</module>
     </modules>
 
     <properties>
@@ -100,9 +100,9 @@
         </dependency>
 
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
         </dependency>
     </dependencies>
 </project>
