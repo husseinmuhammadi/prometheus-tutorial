@@ -1,6 +1,23 @@
 # Prometheus Tutorial
 An overview on prometheus with java, jetty, dropwizard and so on ...
 
+## Build Project
+```
+docker build --no-cache -f Dockerfile .
+docker build --no-cache -t "demo-app" -f Dockerfile .
+```
+
+## Start Prometheus abd Grafana
+
+## Java Console Application 
+
+## Java Web Application - Jetty
+
+## Spring Boot Application - Actuator 
+
+## Drop Wizard Sample 
+
+## JMX
 
 ## A brief overview on metrics in Java
 

@@ -12,10 +12,6 @@
 
     <artifactId>java-console-with-prometheus</artifactId>
 
-    <properties>
-        <prometheus.version>0.9.0</prometheus.version>
-    </properties>
-
     <build>
         <finalName>demo</finalName>
         <plugins>

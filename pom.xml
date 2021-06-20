@@ -12,7 +12,8 @@
     <modules>
 <!--        <module>direct-instrumentation</module>-->
 <!--        <module>direct-instrumentation-with-spring-boot-endpoint</module>-->
-        <module>java-console-with-prometheus</module>
+<!--        <module>java-prometheus</module>-->
+        <module>java-console</module>
     </modules>
 
     <properties>
@@ -23,6 +24,8 @@
 
         <junit.jupiter.version>5.5.2</junit.jupiter.version>
         <junit.platform.version>1.5.2</junit.platform.version>
+
+        <prometheus.version>0.9.0</prometheus.version>
     </properties>
 
     <build>
