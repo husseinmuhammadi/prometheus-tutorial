@@ -2,14 +2,11 @@ package com.javastudio.tutorial.job;
 
 
 import com.javastudio.tutorial.Configuration;
-import org.quartz.Job;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.quartz.impl.StdSchedulerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Properties;
 
 import static org.quartz.JobBuilder.newJob;
 import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
@@ -19,8 +16,6 @@ public enum JobRunner {
     INSTANCE;
 
     private Logger logger = LoggerFactory.getLogger(JobRunner.class);
-
-    private Properties properties = new Properties();
 
     public void start() {
         try {
@@ -34,7 +29,7 @@ public enum JobRunner {
                     newTrigger()
                             .withIdentity("time-consuming-task", "report-group")
                             .withSchedule(simpleSchedule()
-                                    .withIntervalInSeconds(Integer.parseInt(Configuration.getProperty("job.execution.interval.in.second")))
+                                    .withIntervalInMilliseconds(Integer.parseInt(Configuration.getProperty("job.execution.interval.in.milliseconds")))
                                     .repeatForever())
                             .build()
             );

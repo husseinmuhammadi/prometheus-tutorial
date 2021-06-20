@@ -5,7 +5,7 @@ FROM maven:3.6.0-jdk-11 AS build
 
 WORKDIR /workspace
 COPY pom.xml pom.xml
-COPY java-prometheus java-prometheus
+COPY java-console-with-prometheus java-console-with-prometheus
 RUN mvn package
 
 #
@@ -13,8 +13,8 @@ RUN mvn package
 #
 FROM openjdk:11
 WORKDIR /workspace
-COPY --from=build /workspace/java-prometheus/target/demo.jar demo.jar
-COPY --from=build /workspace/java-prometheus/target/lib lib 
+COPY --from=build /workspace/java-console-with-prometheus/target/demo.jar demo.jar
+COPY --from=build /workspace/java-console-with-prometheus/target/lib lib
 # EXPOSE 8080
 
 ENTRYPOINT ["java","-jar","demo.jar"]
