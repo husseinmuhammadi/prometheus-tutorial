@@ -1,12 +1,12 @@
 version: "3.8"
 
 services:
-  demo-app:
+  demo:
     build:
       dockerfile: Dockerfile
       context: .
-    image: demo-app
-    container_name: demo-app
+    image: demo
+    container_name: demo
     ports:
       - "8000:8000"
     networks:

@@ -10,10 +10,9 @@
     <packaging>pom</packaging>
 
     <modules>
-<!--        <module>direct-instrumentation</module>-->
-<!--        <module>direct-instrumentation-with-spring-boot-endpoint</module>-->
-<!--        <module>java-prometheus</module>-->
-        <module>java-console</module>
+        <!--        <module>direct-instrumentation</module>-->
+        <!--        <module>direct-instrumentation-with-spring-boot-endpoint</module>-->
+        <module>java-console-with-prometheus</module>
     </modules>
 
     <properties>

@@ -32,3 +32,20 @@ https://tcblog.protiviti.com/2019/09/04/moving-to-microservices-how-granular-sho
 So the entire service will work if only all parts of the system could work properly as a single service, so it is very important to monitor the functionality of each service.
 
 Expose metrics 
+
+
+## Grafana
+
+By default, Grafana will be listening on http://localhost:3000. The default login is "admin" / "admin".
+
+### Creating a Prometheus data source
+
+To create a Prometheus data source in Grafana:
+
+1. Click on the "cogwheel" in the sidebar to open the Configuration menu.
+2. Click on "Data Sources".
+3. Click on "Add data source".
+4. Select "Prometheus" as the type.
+5. Set the appropriate Prometheus server URL (for example, http://localhost:9090/)
+6. Adjust other data source settings as desired (for example, choosing the right Access method).
+7. Click "Save & Test" to save the new data source.
