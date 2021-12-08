@@ -13,6 +13,7 @@
         <!--        <module>direct-instrumentation</module>-->
         <!--        <module>direct-instrumentation-with-spring-boot-endpoint</module>-->
         <module>java-console-with-prometheus</module>
+        <module>00-java-console-prometheus</module>
     </modules>
 
     <properties>
